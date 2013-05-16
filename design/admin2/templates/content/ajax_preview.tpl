@@ -8,6 +8,9 @@
             <option value="{$sa|wash()}"{cond( $sa|eq( $default_siteaccess ), ' selected="selected"', '' )}>{$sa|wash()}</option>
         {/foreach}
         </select>
+        <button onclick="$('#content-preview.previewed iframe').css('width','100%');return false;" class="button">Desktop</button>
+        <button onclick="$('#content-preview.previewed iframe').css('width','768px');return false;" class="button">Tablet</button>
+        <button onclick="$('#content-preview.previewed iframe').css('width','240px');return false;" class="button">Phone</button>
         <img src={'as-loader.gif'|ezimage} alt="Loading..." style="display:none" id="iframe-loader" />
     </h1>
     <div class="context-information">
@@ -20,4 +23,6 @@
         <div class="break"></div>
     </div>
 </div>
+<div class="preview-frame-container">
 <iframe src={concat( 'content/versionview/', $object.id, '/', $version.version, '/', $locale.locale_code, "/site_access/", $default_siteaccess )|ezurl}></iframe>
+</div>

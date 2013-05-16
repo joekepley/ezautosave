@@ -74,10 +74,15 @@ border-radius:5px;
 color:#550101;
 }
 
+.preview-frame-container {
+	text-align: center;
+}
+
 #content-preview.previewed iframe
 {
 border:1px solid #999;
 width:100%;
+margin: 0 auto;
 margin-bottom:10px;
 }
 
