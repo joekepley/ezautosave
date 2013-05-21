@@ -8,9 +8,11 @@
             <option value="{$sa|wash()}"{cond( $sa|eq( $default_siteaccess ), ' selected="selected"', '' )}>{$sa|wash()}</option>
         {/foreach}
         </select>
-        <button onclick="$('#content-preview.previewed iframe').css('width','100%');return false;" class="button">Desktop</button>
-        <button onclick="$('#content-preview.previewed iframe').css('width','768px');return false;" class="button">Tablet</button>
-        <button onclick="$('#content-preview.previewed iframe').css('width','240px');return false;" class="button">Phone</button>
+        {literal}
+        <button onclick="$('#content-preview.previewed iframe').css({'width':'100%','height':'640px'});return false;" class="button">Desktop</button>
+        <button onclick="$('#content-preview.previewed iframe').css({'width':'768px','height':'1024px'});return false;" class="button">Tablet</button>
+        <button onclick="$('#content-preview.previewed iframe').css({'width':'320px', 'height': '480px'});return false;" class="button">Phone</button>
+        {/literal}
         <img src={'as-loader.gif'|ezimage} alt="Loading..." style="display:none" id="iframe-loader" />
     </h1>
     <div class="context-information">
